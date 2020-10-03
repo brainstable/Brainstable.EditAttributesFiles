@@ -1,23 +1,17 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 
 namespace Brainstable.EditAttributesFiles
 {
-    public partial class MainForm : Form
+    public partial class FormMain : Form
     {
         FileInfo fileInfo;
         string pathFile = String.Empty;
         long sizeFile = 0;
 
-        public MainForm()
+        public FormMain()
         {
             InitializeComponent();
         }
@@ -39,7 +33,6 @@ namespace Brainstable.EditAttributesFiles
                 fileInfo.LastWriteTime.Second,
                 fileInfo.LastWriteTime.Millisecond);
             fileInfo.LastAccessTime = fileInfo.LastWriteTime;
-
 
             lbl_Created.Text = $"{fileInfo.CreationTime.ToLongDateString()}, {fileInfo.CreationTime.ToLongTimeString()}";
             lbl_Changed.Text = $"{fileInfo.LastWriteTime.ToLongDateString()}, {fileInfo.LastWriteTime.ToLongTimeString()}";
@@ -90,10 +83,6 @@ namespace Brainstable.EditAttributesFiles
             }
         }
 
-
-
-
-
         private void AllClear()
         {
             lbl_NameFile.Text = "...";
@@ -105,7 +94,6 @@ namespace Brainstable.EditAttributesFiles
             sizeFile = 0;
             lbl_Changed.Text = lbl_Created.Text = lbl_Opened.Text = "...";
             dtp_Changed.Value = dtp_Created.Value = DateTime.Now;
-
         }
     }
 }

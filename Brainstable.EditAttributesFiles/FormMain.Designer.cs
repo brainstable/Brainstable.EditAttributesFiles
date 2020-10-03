@@ -1,6 +1,6 @@
 ﻿namespace Brainstable.EditAttributesFiles
 {
-    partial class MainForm
+    partial class FormMain
     {
         /// <summary>
         /// Required designer variable.
@@ -255,7 +255,7 @@
             this.btn_Exit.UseVisualStyleBackColor = true;
             this.btn_Exit.Click += new System.EventHandler(this.Btn_Exit_Click);
             // 
-            // MainForm
+            // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -281,7 +281,7 @@
             this.Controls.Add(this.lbl_NameFile);
             this.Controls.Add(this.lbl_PathFile);
             this.Controls.Add(this.btn_LoadFile);
-            this.Name = "MainForm";
+            this.Name = "FormMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EditAttributesFiles 2019";
             this.ResumeLayout(false);
